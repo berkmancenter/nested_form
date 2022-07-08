@@ -79,6 +79,9 @@
       field
         .trigger({ type: 'nested:fieldRemoved', field: field })
         .trigger({ type: 'nested:fieldRemoved:' + assoc, field: field });
+
+      field.remove();
+
       return false;
     }
   };
